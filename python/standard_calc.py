@@ -14,16 +14,16 @@ def bound_to_180(angle):
 
     if angle < 180 and angle >= -180:
         return angle
-    elif angle >= 180: # 180 becomes -180
-        while angle >= 180: # while loop in the case of angle >= 540
+    elif angle >= 180:  # 180 becomes -180
+        while angle >= 180:  # while loop in the case of angle >= 540
             angle = angle - 360
         return angle
     elif angle < -180:
-        while angle < -180: # while loop in the case of angle < -540
+        while angle < -180:  # while loop in the case of angle < -540
             angle = angle + 360
         return angle
     return 0
-    
+
 
 def is_angle_between(first_angle, middle_angle, second_angle):
     """Determines whether an angle is between two other angles.
@@ -53,10 +53,9 @@ def is_angle_between(first_angle, middle_angle, second_angle):
             return False
     return True
 
-
 if __name__ == "__main__":
-    print(bound_to_180(135)) # 135.0
-    print(bound_to_180(200)) # -160.0
-    print(is_angle_between(0, 45, 90)) # True
-    print(is_angle_between(45, 90, 270)) # False
+    print(bound_to_180(135))  # 135.0
+    print(bound_to_180(200))  # -160.0
+    print(is_angle_between(0, 45, 90))  # True
+    print(is_angle_between(45, 90, 270))  # False
     input("Press Enter to exit ")
